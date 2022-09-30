@@ -12,12 +12,14 @@ function rockPaperScissors(){
     let score = 0;
     let result = '';
     let playerTurn;
-    let computerChoice = Math.floor((Math.random() * 3) + 1)
+    let computerChoice = 0;
     
     
     // Game Code
     function choices(){
-
+        let randomComputerChoice = Math.floor((Math.random() * 3) + 1)
+        computerChoice = randomComputerChoice;
+        
         switch(computerChoice){
             case 1: computerChoice = rock; break;
             case 2: computerChoice = paper; break;
@@ -36,7 +38,7 @@ function rockPaperScissors(){
                 case 'Scissors': 
                 case 'scissors':
                 case 's': playerTurn = scissors; rspGame(); break;
-                default: console.log("Wrong input"); playerInput(); break;
+                default: console.log("Wrong input"); choices(); break;
             }
         });
     }
