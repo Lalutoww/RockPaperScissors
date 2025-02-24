@@ -66,8 +66,12 @@ function rockPaperScissors(){
         function wantToContinue(){
             rl.question('Do you want to continue: (Yes/No) ', yn => {
                 switch(yn){
-                    case 'Yes': choices(); break; 
-                    case 'No': rl.close(); break;
+                    case 'Yes': 
+                    case 'yes':
+                    case 'y': choices(); break; 
+                    case 'No':
+                    case 'no':
+                    case 'n': rl.close(); break;
                     default: console.log("Wrong input"); wantToContinue(); break;
                 }
             });
