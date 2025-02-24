@@ -58,7 +58,6 @@ function rockPaperScissors(){
             score = 0;
         }else{
             result = "It's a draw";
-            score = 0;
         }
         console.log("\n" + result);
         console.log("Your score is: " + score);
